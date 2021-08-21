@@ -1,14 +1,15 @@
 import React from "react";
 import Navabar from "../components/navbar";
 import Title from "../components/title";
-import KnowMoreButton from "../components/knowMoreButton";
+
 
 const App = () => {
   return (
-    <div>
+    <div className="App">
       <Navabar />
       <Title />
-      <knowMoreButton />
     </div>
   );
 };
+
+export default App;

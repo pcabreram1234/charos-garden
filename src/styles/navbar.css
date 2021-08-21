@@ -1,0 +1,17 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap";
+
+.navbar {
+    font-family: Roboto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style: none;
+    left: 553px;
+    top: 37px;
+    color: white;
+}
+
+.navbar li {
+    margin: 0 4px;
+}
