@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Title.css";
-import "../assets/images/index.png";
+import KnowMoreButton from "./knowMoreButton";
 
 const Title = () => {
   return (
@@ -10,6 +10,7 @@ const Title = () => {
         Con amor para ti, donde encontrarás las mejores flores, plantas,
         tratamientos, y demás para tu jardín
       </p>
+      <KnowMoreButton />
     </div>
   );
 };

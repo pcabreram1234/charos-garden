@@ -1,0 +1,23 @@
+.KnowMoreButton {
+    background: #977399;
+    border-color: transparent;
+    border-radius: 100px;
+    padding: 2vh;
+    font-size: 20px;
+    cursor: pointer;
+    width: 40vh;
+    outline: none;
+    color: black;
+}
+
+.KnowMoreButton:hover {
+    background: #f8a1f8;
+    color: black;
+    border: 0 0 transparent;
+}
+
+.KnowMoreButton:active {
+    background: #f8a1f8;
+    color: black;
+    box-shadow: 1px 1px 16px 4px rgba(255, 255, 255, 0.50);
+}

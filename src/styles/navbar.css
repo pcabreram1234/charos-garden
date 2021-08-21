@@ -10,8 +10,18 @@
     left: 553px;
     top: 37px;
     color: white;
+    align-items: center;
 }
 
 .navbar li {
     margin: 0 4px;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar li a:hover {
+    color: black;
 }
