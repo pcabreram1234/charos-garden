@@ -1,11 +1,16 @@
 import React from "react";
-import Navabar from "../components/navbar";
+import "../styles/App.css";
+import "../styles/mainContainer.css";
+import FlowerCatalgo from "../components/flowerCatalog";
+import MainPlantCollage from "../components/mainPlantCollage";
+import MainPlantContainer from "../components/mainPlantContainer";
+import PlantsCollage from "../components/PlantsCollage";
 
 const Plants = () => {
   return (
-    <div>
-      <Navabar />
-      <h2>!Holaaaa</h2>
+    <div className="mainContainer">
+      <MainPlantContainer />
+      <FlowerCatalgo />
     </div>
   );
 };

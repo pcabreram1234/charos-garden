@@ -1,12 +1,11 @@
 import React from "react";
 import SearchInput from "./searchInput";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 
-const Navabar = () => {
+const Navbar = () => {
   return (
     <div className="navbar">
-      <Router>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -28,9 +27,8 @@ const Navabar = () => {
         <li>
           <SearchInput />
         </li>
-      </Router>
     </div>
   );
 };
 
-export default Navabar;
+export default Navbar;

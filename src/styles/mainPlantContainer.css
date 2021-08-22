@@ -1,0 +1,40 @@
+.plantMainImage-container {
+    display: flex;
+    flex-direction: row;
+    /*     border: 1px solid black; */
+    position: relative;
+}
+
+.actionButtons-container {
+    position: absolute;
+    display: flex;
+    margin-left: 72%;
+    margin-top: 8px;
+}
+
+.actionButton {
+    opacity: 0.5;
+    outline: none;
+    margin: 4px 6px;
+    padding: 5px 10px;
+    width: min-content;
+    height: min-content;
+    background: #F4FEFF;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.actionButton:hover {
+    opacity: 1;
+}
+
+.actionButton:active {
+    box-shadow: 1px 2px 8px 1px rgb(255, 110, 190);
+    opacity: 1;
+}
+
+.actionButton img {
+    width: 20px;
+    height: 20px;
+}
