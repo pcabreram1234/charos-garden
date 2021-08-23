@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 const FlowerCatalgo = () => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/Plants")
+    fetch("http://localhost:3000/plants/")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         setImages(data);
       });
   }, []);
@@ -14,7 +15,7 @@ const FlowerCatalgo = () => {
   const imagesList = images.map((el) => {
     return (
       <div key={el.id}>
-        <img src={el.src} alt="" />
+        <img src={el.src.toString()} alt="" />
       </div>
     );
   });
