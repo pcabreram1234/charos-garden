@@ -2,7 +2,7 @@ import React from "react";
 import ZoomIcon from "../assets/images/zoom.png";
 import plant1 from "../assets/images/plant1.png";
 
-const MainPlantCollage = (props) => {
+const MainPlantCollage = () => {
   function renderCollage() {
     for (let index = 0; index < 7; index++) {
       return (

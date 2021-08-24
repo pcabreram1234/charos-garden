@@ -1,8 +1,19 @@
+.container{
+width: 100%;
+margin-bottom: 8vw;
+display: flex;
+}
+
 .plantMainImage-container {
     display: flex;
     flex-direction: row;
-    /*     border: 1px solid black; */
     position: relative;
+    margin-bottom: 20px;
+}
+
+.plantMainImage {
+    width: 553px;
+    height: 340px;
 }
 
 .actionButtons-container {
