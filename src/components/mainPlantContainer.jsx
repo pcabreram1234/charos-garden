@@ -1,13 +1,12 @@
 import React from "react";
 import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
-import plant1 from "../assets/images/plant1.png";
 import "../styles/mainPlantContainer.css";
 
 const MainPlantContainer = (props) => {
   return (
     <div className="container">
-      <h2>{props.plantName}</h2>
+{/*       <h2>{props.plantName}</h2>
       <div className="plantMainImage-container">
         <img src={props.srcMainImage} className="plantMainImage" />
         <div className="actionButtons-container">
@@ -18,7 +17,7 @@ const MainPlantContainer = (props) => {
             <img src={info} alt="" />
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

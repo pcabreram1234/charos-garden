@@ -7,7 +7,7 @@ import MainPlantContainer from "../components/mainPlantContainer";
 const Plants = () => {
   return (
     <div className="mainContainer">
-      <MainPlantContainer />
+      <MainPlantContainer/>
       <FlowerCatalgo />
     </div>
   );

@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "../styles/flowerCatalog.css"
+import "../styles/flowerCatalog.css";
+import ZoomIcon from "../assets/images/zoom.png";
+import info from "../assets/images/info.png";
 
 const FlowerCatalgo = () => {
   const [images, setImages] = useState([]);
@@ -13,9 +15,29 @@ const FlowerCatalgo = () => {
       });
   }, []);
 
+  const handleClick = (e) => {
+    console.log(e.target.attributes.src.nodeValue)
+    return (
+      <div className="container">
+        <h2>{}</h2>
+        <div className="plantMainImage-container">
+          <img src={e.target.src} className="plantMainImage" />
+          <div className="actionButtons-container">
+            <button type="button" role="button" className="actionButton">
+              <img src={ZoomIcon} alt="" />
+            </button>
+            <button type="button" role="button" className="actionButton">
+              <img src={info} alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   const imagesList = images.map((el) => {
     return (
-      <div key={el.id} className="thumbnails">
+      <div key={el.id} className="thumbnails" onClick={handleClick}>
         <img src={el.src} alt="" />
       </div>
     );
