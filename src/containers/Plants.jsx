@@ -3,12 +3,19 @@ import "../styles/App.css";
 import "../styles/Plants.css";
 import FlowerCatalgo from "../components/flowerCatalog";
 import MainPlantContainer from "../components/mainPlantContainer";
+import plantMainImageContext from "../context/plantMainImageContext";
 
-const Plants = () => {
+const Plants = (props) => {
+  const setSrcImage = (src) => {
+    return src;
+  };
+
   return (
-    <div className="mainContainer">
-      <MainPlantContainer/>
-      <FlowerCatalgo />
+    <div className="PlantsContainer">
+      <plantMainImageContext.Provider value={[]}>
+        <MainPlantContainer srcImage={setSrcImage()} />
+        <FlowerCatalgo />
+      </plantMainImageContext.Provider>
     </div>
   );
 };

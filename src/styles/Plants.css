@@ -1,10 +1,6 @@
-.mainContainer{
-    display: grid;
+.PlantsContainer{
+    display: flex;
+    flex-direction: column;
     padding: 0px 40px;
 }
 
-.mainContainer:last-child{
-    justify-content: center;
-    margin: auto;
-
-}

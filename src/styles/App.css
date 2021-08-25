@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background: #EC99B7;
-    display: flex;
-    flex-direction: row;
     box-sizing: border-box;
 }

@@ -1,6 +1,6 @@
-.mainContainer{
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+.mainContainer {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%; 
 }

@@ -4,6 +4,7 @@
 }
 
 .title {
+    padding: 0px 5px;
     width: calc(50vw);
     text-align: center;
     display: flex;
@@ -11,7 +12,6 @@
     color: white;
     justify-content: center;
     align-items: center;
-    
 }
 
 .title h1 {
