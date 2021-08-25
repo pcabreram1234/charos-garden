@@ -1,10 +1,6 @@
-import { createContext } from "react";
+import React from "react";
 
-const imageOb = {
-  src: null,
-  namePlant: null,
-};
+const plantMainImageContext = React.createContext()
 
-const plantMainImageContext = createContext({ imageOb });
 
-export default plantMainImageContext;
+export default { plantMainImageContext };

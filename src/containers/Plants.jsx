@@ -5,15 +5,16 @@ import FlowerCatalgo from "../components/flowerCatalog";
 import MainPlantContainer from "../components/mainPlantContainer";
 import plantMainImageContext from "../context/plantMainImageContext";
 
-const Plants = (props) => {
-  const setSrcImage = (src) => {
-    return src;
+const Plants = () => {
+  const imageOb = {
+    src: null,
+    namePlant: null,
   };
 
   return (
     <div className="PlantsContainer">
-      <plantMainImageContext.Provider value={[]}>
-        <MainPlantContainer srcImage={setSrcImage()} />
+      <plantMainImageContext.Provider value={imageOb}>
+        <MainPlantContainer />
         <FlowerCatalgo />
       </plantMainImageContext.Provider>
     </div>

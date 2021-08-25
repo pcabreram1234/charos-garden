@@ -1,6 +1,8 @@
-import { useContext  } from "react";
+import { useContext } from "react";
 import plantMainImageContext from "../context/plantMainImageContext";
 
-export default () => {
+const useMainPlantContainer = () => {
   useContext(plantMainImageContext);
 };
+
+export default useMainPlantContainer;
