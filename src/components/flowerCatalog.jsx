@@ -1,30 +1,22 @@
 import React from "react";
 import UseFlowerCatalog from "../hooks/useFlowerCatalog";
 import "../styles/flowerCatalog.css";
-import plantMainImageContext from "../context/plantMainImageContext";
-import useMainPlantContainer from "../hooks/useMainPlantContainer";
+import setSrcMainImage from "../utils/setSrcMainImage";
 
 const FlowerCatalgo = () => {
-  const renderFlowers = UseFlowerCatalog();
-  const handleClick = (e) => {
-    console.log(e);
-  };
-
+  const renderFlowers = UseFlowerCatalog()
+  
   const imagesList = renderFlowers.map((el) => {
-    const useMainContext = {
-      src: el.src,
-      namePlant: el.id
-    }
     return (
-      <div key={el.id} className="thumbnails" onClick={useMainPlantContainer(useMainContext)}>
+      <div key={el.id} className="thumbnails" onClick={setSrcMainImage(el.src, "mainPlantContainer")}>
         <img src={el.src} alt="" />
       </div>
     );
   });
+  
+
   return <div className="photos-container">
-    <plantMainImageContext.Consumer>
-      {imagesList}
-    </plantMainImageContext.Consumer>
+    {imagesList}
   </div>;
 };
 

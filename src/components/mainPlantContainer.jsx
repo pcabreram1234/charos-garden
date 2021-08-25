@@ -8,7 +8,7 @@ const MainPlantContainer = (props) => {
       <div className="container">
         <h2>{props.plantName}</h2>
         <div className="plantMainImage-container">
-          <img src={props.srcImage} className="plantMainImage" />
+          <img className="plantMainImage"  id="mainPlantContainer" />
           <div className="actionButtons-container">
             <button type="button" role="button" className="actionButton">
               <img src={ZoomIcon} alt="" />

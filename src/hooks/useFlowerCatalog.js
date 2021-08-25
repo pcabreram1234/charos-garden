@@ -6,7 +6,6 @@ const UseFlowerCatalog = () => {
     fetch("http://localhost:3000/Plants")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setImages(data);
       });
   }, []);
