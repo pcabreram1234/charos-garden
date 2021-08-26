@@ -2,23 +2,30 @@ import React from "react";
 import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
 import "../styles/mainPlantContainer.css";
+import { ConsumerPlants, plantsContext,  } from "../context/Plants";
+import { useContext } from "react";
 
-const MainPlantContainer = (props) => {
+const MainPlantContainer = () => {
+  const image = useContext(plantsContext);
   return (
-      <div className="container">
-        <h2>{props.plantName}</h2>
-        <div className="plantMainImage-container">
-          <img className="plantMainImage"  id="mainPlantContainer" />
-          <div className="actionButtons-container">
-            <button type="button" role="button" className="actionButton">
-              <img src={ZoomIcon} alt="" />
-            </button>
-            <button type="button" role="button" className="actionButton">
-              <img src={info} alt="" />
-            </button>
+    <ConsumerPlants>
+      {(props) => {
+        <div className="container">
+          <h2>{image.name}</h2>
+          <div className="plantMainImage-container">
+            <img className="plantMainImage" src={image.src} />
+            <div className="actionButtons-container">
+              <button type="button" role="button" className="actionButton">
+                <img src={ZoomIcon} alt="" />
+              </button>
+              <button type="button" role="button" className="actionButton">
+                <img src={info} alt="" />
+              </button>
+            </div>
           </div>
-        </div>
-      </div>
+        </div>;
+      }}
+    </ConsumerPlants>
   );
 };
 

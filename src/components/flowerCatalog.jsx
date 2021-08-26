@@ -1,23 +1,17 @@
 import React from "react";
 import UseFlowerCatalog from "../hooks/useFlowerCatalog";
 import "../styles/flowerCatalog.css";
-import setSrcMainImage from "../utils/setSrcMainImage";
+import Thumbnails from "./thumbnail";
+
 
 const FlowerCatalgo = () => {
-  const renderFlowers = UseFlowerCatalog()
-  
+  const renderFlowers = UseFlowerCatalog();
   const imagesList = renderFlowers.map((el) => {
-    return (
-      <div key={el.id} className="thumbnails" onClick={setSrcMainImage(el.src, "mainPlantContainer")}>
-        <img src={el.src} alt="" />
-      </div>
-    );
-  });
-  
 
-  return <div className="photos-container">
-    {imagesList}
-  </div>;
+    return <Thumbnails key={el.id} src={el.src} />;
+  });
+
+  return <div className="photos-container">{imagesList}</div>;
 };
 
 export default FlowerCatalgo;
