@@ -5,9 +5,9 @@ import Thumbnails from "./thumbnail";
 
 
 const FlowerCatalgo = () => {
+
   const renderFlowers = UseFlowerCatalog();
   const imagesList = renderFlowers.map((el) => {
-
     return <Thumbnails key={el.id} src={el.src} />;
   });
 
