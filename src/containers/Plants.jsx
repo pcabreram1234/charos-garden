@@ -1,22 +1,30 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/App.css";
 import "../styles/Plants.css";
-import FlowerCatalgo from "../components/flowerCatalog";
 import MainPlantContainer from "../components/mainPlantContainer";
+import FlowerCatalgo from "../components/flowerCatalog";
+import { Scroll } from "../utils/scroll";
 
-
-export const plantInfo = {
-  name: null,
-  src: null
-}
 
 const Plants = () => {
+
+  const [srcMainImage, setSrc] = useState([])
+  const [titleMainImage, setTittle] = useState([])
+
+  const handleClick = (src, title) => {
+    setSrc(src)
+    setTittle(title)
+    Scroll()
+  }
+
   return (
     <div className="PlantsContainer">
-      <MainPlantContainer />
-      <FlowerCatalgo />
+      <MainPlantContainer src={srcMainImage} title={titleMainImage} />
+      <FlowerCatalgo handleClick={handleClick} />
     </div>
   );
+
 };
 
 export default Plants;

@@ -1,23 +1,26 @@
 import React from "react";
 import ZoomIcon from "../assets/images/zoom.png";
-import plant1 from "../assets/images/plant1.png";
+import "../styles/MainPlantCollage.css";
 
-const MainPlantCollage = () => {
-  function renderCollage() {
-    for (let index = 0; index < 7; index++) {
-      return (
-        <div className="imageCollage-container">
-          <img src={plant1} className="planCollageImage" />
-          <div className="actionButtons-container">
-            <button type="button" role="button" className="actionButton">
+const MainPlantCollage = (props) => {
+  const objectImage = []
+  const renderCollage = () => {
+    for (let index = 0; index < 6; index++) {
+      objectImage.push(
+        <div className="thumnbnails" key={Math.random()}>
+          <img src={props.src} className="planCollageImage" />
+          <div className="actionButtons-Collage-container">
+            <button type="button" role="button" className="actionButtonCollage">
               <img src={ZoomIcon} alt="" />
             </button>
           </div>
         </div>
-      );
+      )
     }
   }
-  return <div>{renderCollage()}</div>;
+
+  renderCollage()
+  return objectImage;
 };
 
 export default MainPlantCollage;
