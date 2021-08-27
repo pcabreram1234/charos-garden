@@ -1,10 +1,10 @@
 @font-face {
-    font-family: Roboto;
+    font-family: Satisfy;
     src: url(../assets/fonts/Satisfy/Satisfy-Regular.ttf);
 }
 
 .navbar {
-    font-family: Roboto;
+    font-family: Satisfy;
     width: 100vw;
     display: flex;
     flex-direction: row;

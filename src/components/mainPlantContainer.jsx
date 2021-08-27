@@ -3,13 +3,15 @@ import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
 import "../styles/mainPlantContainer.css";
 
-
-const MainPlantContainer = ({ src, name }) => {
+const MainPlantContainer = () => {
   return (
     <div className="container">
-      <h2>{name}</h2>
+      <div className="titleContainer">
+        <h2 className="mainPlant--title"></h2>
+      </div>
+
       <div className="plantMainImage-container">
-        <img className="plantMainImage" src={src} />
+        <img className="plantMainImage" />
         <div className="actionButtons-container">
           <button type="button" role="button" className="actionButton">
             <img src={ZoomIcon} alt="" />
