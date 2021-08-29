@@ -3,40 +3,33 @@ import MainPlantCollage from "./mainPlantCollage";
 import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
 import "../styles/mainPlantContainer.css";
-import ModalComponent from "../components/Modal";
 import { useState } from "react";
-import { render } from "react-dom";
+import ModalContainer from "./Modal2";
 
 const MainPlantContainer = (props) => {
-  const [toggle, setModalSate] = useState([false]);
+  const [toggle, setModalSate] = useState(false);
 
   const toggleModal = () => {
-    const modalOption = {
-      isOpen: setModalSate(!toggle),
-      srcModalImage: props.src,
-      header: props.title,
-    };
-    console.log(modalOption);
-    return modalOption;
+    setModalSate(!toggle);
   };
-
   return (
     <div className="container">
+      <Modal />
+      {/*       <div className="modalContainer">
+        <Modal isOpen={toggle} toggle={toggleModal} centered={true} size="lg">
+          <ModalHeader>{props.title}</ModalHeader>
+          <ModalBody>
+            <img src={props.src} alt="" />
+          </ModalBody>
+        </Modal>
+      </div> */}
       <div className="titleContainer">
         <h2 className="mainPlant--title">{props.title}</h2>
       </div>
       <div className="plantMainImage-container">
         <img className="plantMainImage" src={props.src} />
         <div className="actionButtons-container">
-          <button
-            type="button"
-            role="button"
-            className="actionButton"
-            onClick={() => {
-              toggleModal();
-              return <ModalComponent toggleModal={toggleModal} />;
-            }}
-          >
+          <button className="actionButton" role="button" type="button">
             <img src={ZoomIcon} alt="" />
           </button>
           <button type="button" role="button" className="actionButton">

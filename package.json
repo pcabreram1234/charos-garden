@@ -49,6 +49,10 @@
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.3",
+    "antd": "^4.16.13",
+    "bootstrap": "^5.1.0",
+    "react-popper": "^2.2.5",
     "react-router-dom": "^5.2.0",
     "reactstrap": "^8.9.0",
     "request": "^2.79.0"

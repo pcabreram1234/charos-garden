@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from "reactstrap";
-
-const ModalComponent = ({ toggleModal }) => {
-  const modalOption = { toggleModal };
-  console.log(modalOption);
+import "../styles/Modal.css";
+const ModalComponent = (props,{toggleModal}) => {
   return (
-    <Modal isOpen={toggleModal.isOpen}>
-      <ModalHeader>{toggleModal.header}</ModalHeader>
+    <Modal
+      isOpen={props.toggle}
+      toggle={toggleModal}
+      centered={true}
+      size="lg"
+    >
+      <ModalHeader>{props.header}</ModalHeader>
       <ModalBody>
-        <img src={toggleModal.src} alt="" />
+        <img src={props.src} alt="" />
       </ModalBody>
       <ModalFooter>
-        <Button color="info" close={true}></Button>
+        <Button onClick={toggleModal}>Cerrar</Button>
       </ModalFooter>
     </Modal>
   );
