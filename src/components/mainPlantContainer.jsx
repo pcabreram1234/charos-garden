@@ -24,6 +24,7 @@ const MainPlantContainer = (props) => {
   return (
     <div className="container">
       <Modal2
+        title={props.title}
         isVisible={isModalVisible}
         handleCancel={handleCancel}
         handleOk={handleOk}
