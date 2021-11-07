@@ -1,5 +1,5 @@
 import React from "react";
-import MainPlantCollage from "./mainPlantCollage";
+import MainPlantCollage from "./MainPlantCollage";
 import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
 import "../styles/mainPlantContainer.css";
@@ -29,6 +29,8 @@ const MainPlantContainer = (props) => {
         handleCancel={handleCancel}
         handleOk={handleOk}
         src={props.src}
+        children={<img className="plantMainImage" src={props.src} />}
+        hasCarousel={false}
       />
       <div className="titleContainer">
         <h2 className="mainPlant--title">{props.title}</h2>

@@ -1,3 +1,4 @@
+
 .photos-container {
     display: flex;
     flex-direction: row;
@@ -13,7 +14,8 @@
     width: 341px;
     height: 248px;
     margin: 4px 10px;
-    background-size: cover;
+    object-fit: cover;
+    border-radius: 20%;
     opacity: 0.7;
     transition: transform 900ms, opacity 900ms;
 }
@@ -23,3 +25,4 @@
     opacity: 1;
     cursor: pointer;
 }
+

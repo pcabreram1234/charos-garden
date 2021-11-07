@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../components/title";
+import Title from "../components/Title";
 import PrincipalImage from "../components/principalImage";
 import "../styles/mainContainer.css";
 
