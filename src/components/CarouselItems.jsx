@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Carousel } from "antd";
 import "../styles/CarouselItems.css";
 import "../styles/Carousel.css";
@@ -9,24 +8,24 @@ const CarouselItems = (props) => {
   const objectImage = [];
 
   //Funcion que agrega al container del componente cada imagen
-  const renderCollage = () => {
+  const addCollageItems = () => {
     for (let index = 0; index < 6; index++) {
-      objectImage.push(
-        <div key={Math.random()} className="slide-Container">
-          <img src={props.src} alt="" width="100px" />
-        </div>
-      );
+      objectImage.push(<img src={props.src} alt="" width="100px" />);
     }
   };
-  renderCollage();
-
-  ReactDOM.render(
+  addCollageItems();
+  return (
     <Carousel autoplay dotPosition="top">
-      {objectImage}
-    </Carousel>,
-    document.getElementById("app")
+      {objectImage.map((item) => {
+        console.log(item.props);
+        return (
+          <div key={Math.random()}>
+            <img src={item.props.src} alt="" />
+          </div>
+        );
+      })}
+    </Carousel>
   );
 };
-
 
 export default CarouselItems;

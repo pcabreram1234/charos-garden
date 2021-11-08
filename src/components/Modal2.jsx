@@ -15,6 +15,7 @@ const Modal2 = (props) => {
         centered={true}
         closeIcon={<img src={closeIcon} />}
         destroyOnClose
+        footer={null}
       >
         {props.hasCarousel ? <CarouselItems src={props.src} /> : props.children}
       </Modal>
