@@ -11,6 +11,9 @@
     justify-content: flex-end;
     list-style: none;
     color: white;
+    position: absolute;
+    left: 10px;
+    top: 2px;
 }
 
 .navbar li {

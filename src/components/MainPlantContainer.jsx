@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MainPlantCollage from "./MainPlantCollage";
 import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
@@ -21,6 +22,15 @@ const MainPlantContainer = (props) => {
     setIsModalVisible(false);
   };
 
+  const handleInfoReceived = () => {
+    /*     let infoReceived = {
+      name: props.title,
+    }; */
+
+    return "Phillip";
+  };
+
+  console.log(props);
   return (
     <div className="container">
       <Modal2
@@ -46,9 +56,17 @@ const MainPlantContainer = (props) => {
           >
             <img src={ZoomIcon} alt="" />
           </button>
-          <button type="button" role="button" className="actionButton">
-            <img src={info} alt="" />
-          </button>
+          <Link to="/Products-Details">
+            <button
+              type="button"
+              className="actionButton"
+              onClick={() => {
+                handleInfoReceived;
+              }}
+            >
+              <img src={info} alt="" />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="collageContainer">
