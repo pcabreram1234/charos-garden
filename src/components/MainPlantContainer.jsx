@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MainPlantCollage from "./MainPlantCollage";
+import ProductDetails from "../containers/Product-Details";
 import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
 import "../styles/mainPlantContainer.css";
-import { useState } from "react";
 import Modal2 from "./Modal2";
 
 const MainPlantContainer = (props) => {
@@ -23,11 +23,10 @@ const MainPlantContainer = (props) => {
   };
 
   const handleInfoReceived = () => {
-    /*     let infoReceived = {
+    let infoReceived = {
       name: props.title,
-    }; */
-
-    return "Phillip";
+    };
+    return infoReceived;
   };
 
   console.log(props);
@@ -61,7 +60,7 @@ const MainPlantContainer = (props) => {
               type="button"
               className="actionButton"
               onClick={() => {
-                handleInfoReceived;
+                <ProductDetails handleInfo={handleInfoReceived} />;
               }}
             >
               <img src={info} alt="" />

@@ -18,7 +18,11 @@ const Plants = () => {
 
   return (
     <div className="PlantsContainer">
-      <MainPlantContainer src={srcMainImage} title={titleMainImage} />
+      <MainPlantContainer
+        handleClick={handleClick}
+        src={srcMainImage}
+        title={titleMainImage}
+      />
       <FlowerCatalgo handleClick={handleClick} />
     </div>
   );

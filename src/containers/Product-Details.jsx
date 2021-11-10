@@ -2,12 +2,18 @@ import React from "react";
 import ProductContainer from "../components/ProductContainer";
 import BackArrow from "../components/BackArrow";
 
-const ProductDetails = ({ handleInfoReceived }) => {
-  const receivedInfo = handleInfoReceived;
+const ProductDetails = ({ handleInfo }, props) => {
+  const readInfo = () => {
+    console.log(props);
+  };
   return (
-    <div>
+    <div
+      onLoad={() => {
+        handleInfo(readInfo());
+      }}
+    >
       <BackArrow />
-      <ProductContainer receivedInfo={receivedInfo} />
+      <ProductContainer />
     </div>
   );
 };
