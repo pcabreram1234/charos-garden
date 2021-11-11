@@ -22,14 +22,6 @@ const MainPlantContainer = (props) => {
     setIsModalVisible(false);
   };
 
-  const handleInfoReceived = () => {
-    let infoReceived = {
-      name: props.title,
-    };
-    return infoReceived;
-  };
-
-  console.log(props);
   return (
     <div className="container">
       <Modal2
@@ -55,14 +47,13 @@ const MainPlantContainer = (props) => {
           >
             <img src={ZoomIcon} alt="" />
           </button>
-          <Link to="/Products-Details">
-            <button
-              type="button"
-              className="actionButton"
-              onClick={() => {
-                <ProductDetails handleInfo={handleInfoReceived} />;
-              }}
-            >
+          <Link
+            to={`/Products-Details/${props.id}`}
+            onClick={() => {
+              <ProductDetails id={props.id} />;
+            }}
+          >
+            <button type="button" className="actionButton">
               <img src={info} alt="" />
             </button>
           </Link>

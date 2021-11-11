@@ -12,12 +12,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" sensitive={true} component={Home} />
         <Route exact path="/Plants" sensitive={true} component={Plants} />
-        <Route
-          exact
-          path="/Products-Details"
-          sensitive={true}
-          component={ProductDetails}
-        />
+        <Route path="/Products-Details/:id" component={ProductDetails} />
       </Switch>
     </Router>
   );

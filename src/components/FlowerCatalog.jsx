@@ -11,6 +11,7 @@ const FlowerCatalgo = (props) => {
         key={el.id}
         src={el.src}
         name={el.name}
+        id={el.id}
         getSrcImage={props.handleClick}
       />
     );
