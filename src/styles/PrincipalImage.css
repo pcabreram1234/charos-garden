@@ -1,0 +1,18 @@
+.PrincipalImage {
+    margin-left: 20px;
+    margin-right: 3%;
+    width: 50%;
+    border-radius: 150px;
+    display: flex;
+    background-color: transparent;
+    background: transparent;
+    float: right;
+
+}
+
+.PrincipalImage img {
+    width: 733px;
+    height: 674px;
+    border-radius: 20vh;
+    box-shadow: inset 4px 4px 4px 8px #EC99B7;
+}

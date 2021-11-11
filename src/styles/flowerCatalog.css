@@ -1,0 +1,28 @@
+
+.photos-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    background: #FFB49F;
+    border-radius: 40px;
+    padding: 20px 0px;
+    justify-content: space-evenly;
+}
+
+.thumbnails img {
+    width: 341px;
+    height: 248px;
+    margin: 4px 10px;
+    object-fit: cover;
+    border-radius: 20%;
+    opacity: 0.7;
+    transition: transform 900ms, opacity 900ms;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.5);
+    opacity: 1;
+    cursor: pointer;
+}
+

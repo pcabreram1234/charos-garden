@@ -1,0 +1,12 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap";
+
+.searchInput {
+    background: #FFFFFF;
+    box-shadow: 2px 1px 7px 4px rgba(148, 146, 146, 0.25);
+    border-radius: 40px;
+    width: 25vh;
+    height: 100%;
+    outline: none;
+    border-color: transparent;
+    padding: 2px 10px;
+}

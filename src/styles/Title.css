@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Satisfy";
+    src: url(../assets/fonts/Satisfy/Satisfy-Regular.ttf);
+}
+
+.title {
+    padding: 0px 5px;
+    width: calc(50vw);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 {
+    font-family: Satisfy;
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.title p {
+    font-size: 35px;
+    font-family: Roboto;
+
+}

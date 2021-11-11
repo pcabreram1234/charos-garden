@@ -1,0 +1,61 @@
+{
+  "name": "charos-garden",
+  "version": "1.0.0",
+  "description": "Project based about a flower shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode development",
+    "server": "json-server --watch ./src/utils/plantsBd.json --port 3004",
+    "dev": "concurrently \"npm run server\" \"npm run start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcabreram1234/charos-garden.git"
+  },
+  "keywords": [
+    "charos",
+    "garden",
+    "flower",
+    "flowers",
+    "react",
+    "reactjs",
+    "pink"
+  ],
+  "author": "Phillip Cabrera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pcabreram1234/charos-garden/issues"
+  },
+  "homepage": "https://github.com/pcabreram1234/charos-garden#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^6.2.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "json-server": "^0.16.3",
+    "mini-css-extract-plugin": "^2.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.3",
+    "antd": "^4.16.13",
+    "bootstrap": "^5.1.0",
+    "react-popper": "^2.2.5",
+    "react-router-dom": "^5.2.0",
+    "reactstrap": "^8.9.0",
+    "request": "^2.79.0"
+  }
+}
