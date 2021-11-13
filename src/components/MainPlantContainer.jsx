@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MainPlantCollage from "./MainPlantCollage";
-import ProductDetails from "../containers/Product-Details";
 import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
 import "../styles/mainPlantContainer.css";
