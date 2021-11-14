@@ -4,7 +4,11 @@ import ZoomIcon from "../assets/images/zoom.png";
 
 const ProductContainer = ({ id }) => {
   const fetch = useFetchProduct(id);
-  console.log(id);
+  let srcEl = "";
+
+  for (const el of fetch) {
+    srcEl = el.src;
+  }
   return (
     <div className="ProductContainer">
       <h1>Ejemplo</h1>
@@ -12,7 +16,7 @@ const ProductContainer = ({ id }) => {
         <img src={ZoomIcon} alt="" />
       </div>
       <div className="ProductContainer-button">
-        <img src={fetch.src} alt="" />
+        <img src={srcEl} alt="" />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const useFetchProduct = (id) => {
     fetch(`http://localhost:3000/Plants?id=${id}`)
       .then((response) => response.json())
       .then((data) => {
-        setImages(data);
+       setImages(data);
       });
   }, []);
   return image;
