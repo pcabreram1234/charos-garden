@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import MainPlantCollage from "./MainPlantCollage";
 import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
@@ -7,6 +6,8 @@ import "../styles/mainPlantContainer.css";
 import Modal2 from "./Modal2";
 
 const MainPlantContainer = (props) => {
+  const { handleShowInfo } = props;
+  console.log(props);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -46,11 +47,14 @@ const MainPlantContainer = (props) => {
           >
             <img src={ZoomIcon} alt="" />
           </button>
-          <Link to="/Products">
-            <button type="button" role="button" className="actionButton">
-              <img src={info} alt="" />
-            </button>
-          </Link>
+          <button
+            type="button"
+            role="button"
+            className="actionButton"
+            onClick={handleShowInfo}
+          >
+            <img src={info} alt="" />
+          </button>
         </div>
       </div>
       <div className="collageContainer">

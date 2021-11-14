@@ -17,6 +17,13 @@
     height: 9vh;
 }
 
+
+/* .BackArrow-container__button button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+} */
+
 .BackArrow-container__button,
 .BackArrow-container__button img {
     Width: 38px;

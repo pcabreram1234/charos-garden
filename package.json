@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode development",
     "server": "json-server --watch ./src/utils/plantsBd.json",
-    "dev": "concurrently \"npm run server\" \"npm run start\" node --trace-deprecation"
+    "dev": "concurrently \"npm run server\" \"npm run start\""
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "babel-loader": "^8.2.3",
     "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.1.0",
     "css-loader": "^6.5.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "html-loader": "^3.0.1",
@@ -48,7 +49,9 @@
     "react-dom": "17.0.2",
     "style-loader": "^3.3.1",
     "webpack": "^5.64.0",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-middleware": "^5.2.1",
+    "webpack-dev-server": "^4.5.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",

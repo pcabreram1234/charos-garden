@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -9,6 +10,7 @@ module.exports = {
     filename: "bundle[fullhash].js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/[hash][ext][query]",
+    publicPath: "/",
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -30,6 +32,7 @@ module.exports = {
         test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
         generator: {
+          filename: "assets/styles/[hash][ext][query]",
           dataUrl: {
             mimetype: "text/html",
           },
@@ -51,15 +54,28 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    historyApiFallback: true,
+    /*     devMiddleware: {
+      index: true,
+      mimeTypes: { "text/html": ["php"], "text/css": ["css"] },
+      publicPath: "/",
+      serverSideRender: true,
+      writeToDisk: true,
+    }, */
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebPackPlugin({
-      filename: "./public/index.html",
-      template: "./public/index.html",
       inject: true,
+      template: "./public/index.html",
+      filename: "./index.html",
     }),
     new MiniCssExtractPlugin({
       filename: "assets/styles/[name].[contenthash].css",
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: "./src/assets/images", to: "./assets/images" }],
     }),
   ],
 };

@@ -18,9 +18,24 @@ const Plants = (props) => {
     Scroll();
   };
 
+  const handleLink = () => {
+    props.history.push(`/ProductDetails/${id}`);
+  };
+
+  const handleShowInfo = () => {
+    typeof id === "object"
+      ? alert("Favor de elegir una planta")
+      : handleLink(id);
+  };
+
   return (
     <div className="PlantsContainer">
-      <MainPlantContainer src={srcMainImage} title={titleMainImage} id={id} />
+      <MainPlantContainer
+        src={srcMainImage}
+        title={titleMainImage}
+        id={id}
+        handleShowInfo={handleShowInfo}
+      />
       <FlowerCatalgo handleClick={handleClick} />
     </div>
   );
