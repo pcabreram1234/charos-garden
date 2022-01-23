@@ -1,57 +1,60 @@
 .ProductContainer {
-    margin: 40px 40px;
+  margin: 40px 40px;
+  grid-column: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-.ProductContainer-image{
-    width: 560px;
-    padding: 10px 0px;
+.ProductContainer-image {
+  width: 560px;
+  padding: 10px 0px;
 }
 .ProductContainer-image img {
-    width: 553px;
-    height: 340px;
+  width: 553px;
+  height: 340px;
 }
 
-.ProductContainer-image h1{
-    text-align: center;
-    color: white;
+.ProductContainer-image h1 {
+  text-align: center;
+  color: white;
 }
 
 .Product-collage-Container {
-    width: 40vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  width: 40vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .Product-collage-Container div {
-    margin: 0;
-    padding: 0;
-    margin: 1vh 0;
+  margin: 0;
+  padding: 0;
+  margin: 1vh 0;
 }
 
 .ProductContainer-button {
-    opacity: 0.5;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: #F4FEFF;
-    border-radius: 40px;
-    position: absolute;
-    width: 50px;
-    height: 40px;
-    left: 490px;
-    top: 100px;
-    cursor: pointer;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #f4feff;
+  border-radius: 40px;
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  left: 490px;
+  top: 100px;
+  cursor: pointer;
 }
 
 .ProductContainer-button img {
-    width: 23px;
-    height: 22px;
-    cursor: pointer;
+  width: 23px;
+  height: 22px;
+  cursor: pointer;
 }
 
 .ProductContainer-button:hover {
-    opacity: 1;
+  opacity: 1;
 }

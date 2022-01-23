@@ -1,0 +1,12 @@
+.ProductDetails__Container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.ProductDetails__Container .ProductContainer .ProductContainer-button {
+  left: 657px;
+  top: 129px;
+}

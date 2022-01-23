@@ -7,7 +7,6 @@ import "../styles/ProductContainer.css";
 import * as modalFuntions from "../utils/modalFuntions";
 
 const ProductContainer = (props) => {
-  console.log(modalFuntions);
   const { id } = props;
   const fetch = useFetchProduct(id);
   let srcEl = "";

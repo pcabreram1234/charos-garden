@@ -1,22 +1,21 @@
 .BackArrow-container {
-    position: absolute;
-    left: 10px;
-    top: 2px;
-    width: 100%;
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  width: 100%;
+  grid-column: 1 / 1;
 }
-
 
 .BackArrow-container__button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    padding: 2px 4px;
-    width: 10vw;
-    height: 9vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 2px 4px;
+  width: 10vw;
+  height: 9vh;
 }
-
 
 /* .BackArrow-container__button button {
     background-color: transparent;
@@ -26,18 +25,18 @@
 
 .BackArrow-container__button,
 .BackArrow-container__button img {
-    Width: 38px;
-    Height: 36px;
+  width: 38px;
+  height: 36px;
 }
 
 .BackArrow-container__button span {
-    margin-left: 3px;
+  margin-left: 3px;
 }
 
-.BackArrow-container__button:hover>span {
-    color: white;
+.BackArrow-container__button:hover > span {
+  color: white;
 }
 
 .BackArrow-container__button:hover img {
-    color: white;
+  color: white;
 }

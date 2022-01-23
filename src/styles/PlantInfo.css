@@ -1,0 +1,18 @@
+@font-face {
+  font-family: Gabriela;
+  src: url(../assets/fonts/Gabriela/Gabriela-Regular.ttf);
+}
+
+.PlantInfo__Container {
+  grid-column: 2 / 3;
+  font-family: Gabriela;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PlantInfo__Container span {
+  text-align: center;
+  line-height: calc(200%);
+  margin: 0 40px;
+}
