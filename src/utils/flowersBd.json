@@ -1,0 +1,22 @@
+{
+  "Flowers": [
+    {
+      "id": 1,
+      "name": "Silvestres",
+      "detail": "Rosa canina, el rosal silvestre, es un arbusto espinoso de hoja caduca de la familia de las rosáceas, nativo de Europa, el noroeste de África y Asia occidental. También ha sido introducido en Norteamérica y otras partes del mundo. Actualmente su distribución es bastante amplia.",
+      "src": "./assets/images/silvestres.png"
+    },
+    {
+      "id": 2,
+      "name": "Modernas",
+      "detail": "En el cultivo de las rosas de jardín una rosa moderna se define como una rosa perteneciente a alguna de las variedades de rosa obtenidas tras la introducción de la primera rosa moderna de jardín, la rosa 'La France', en 1867.1​",
+      "src": "./assets/images/modernas.png"
+    },
+    {
+      "id": 3,
+      "name": "Antiguas",
+      "detail": "En el cultivo de las rosas de jardín una rosa antigua se define como cualquier rosa que pertenezca a una variedad existente con anterioridad a la introducción de la primera rosa moderna de jardín, la rosa 'La France', en 1867.1​​",
+      "src": "/assets/images/antiguas.png"
+    }
+  ]
+}

@@ -56,13 +56,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    /*     devMiddleware: {
-      index: true,
-      mimeTypes: { "text/html": ["php"], "text/css": ["css"] },
-      publicPath: "/",
-      serverSideRender: true,
-      writeToDisk: true,
-    }, */
   },
   plugins: [
     new CleanWebpackPlugin(),

@@ -4,6 +4,8 @@ import Home from "../containers/Home";
 import Plants from "../containers/Plants";
 import Navbar from "../components/Navbar";
 import ProductDetails from "../containers/ProductDetails";
+import AboutUs from "../containers/AboutUs";
+import Flowers from "../containers/Flowers";
 import "../styles/App.css";
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
         <Route exact path="/" sensitive={true} component={Home} />
         <Route exact path="/Plants" sensitive={true} component={Plants} />
         <Route path="/ProductDetails/:id" component={ProductDetails} />
+        <Route path="/AboutUs" component={AboutUs} />
+        <Route path="/Flowers" component={Flowers} />
       </Switch>
     </Router>
   );
