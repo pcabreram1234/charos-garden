@@ -10,3 +10,25 @@
   left: 657px;
   top: 129px;
 }
+
+@media (max-width: 1280px) {
+  .ProductDetails__Container {
+    grid-template-columns: 50% 50%;
+  }
+
+  .Product-collage-Container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: calc(1vh);
+  }
+
+  .ProductDetails__Container
+    .Product-collage-Container
+    .thumnbnails
+    .planCollageImage {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+  }
+}

@@ -5,10 +5,12 @@ import "../styles/PlantInfo.css";
 const PlantInfo = (props) => {
   const [detail, setDetail] = useState("");
 
+  const currentWindowWidth = window.matchMedia("(max-width: 1280px)");
+
   const style = {
     backgroundImage: "url(" + plantInforBackground + ")",
     backgroundSize: "cover",
-    height: "100vh",
+    height: currentWindowWidth ? "98vh" : "100vh",
     backgroundPositionY: "16px",
   };
 
