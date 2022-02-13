@@ -1,12 +1,3 @@
-@font-face {
-  font-family: Satisfy;
-  src: url(../assets/fonts/Satisfy/Satisfy-Regular.ttf);
-}
-
-@font-face {
-  font-family: Gabriela;
-  src: url(../assets/fonts/Gabriela/Gabriela-Regular.ttf);
-}
 
 .AboutUs__Container {
   height: min(100vh, 506px);

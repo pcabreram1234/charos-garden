@@ -1,10 +1,53 @@
 .Flowers__Album {
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  justify-items: center;
+  gap: 10px;
+}
+
+.CurrentFlower_Container {
+  width: 100vw;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 0 0 10px;
+  margin-top: 200px;
+  text-align: center;
   align-items: center;
+}
+
+.CurrentFlowe-info h1 {
+  font-family: Satisfy;
+  font-size: 80px;
+}
+.CurrentFlowe-info p {
+  font-family: Roboto;
+  font-weight: lighter;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.CurrentFlower--img {
+  box-shadow: 4px -1px 16px #efa4b3;
+  border-radius: 200px 0 0 200px;
+}
+.CurrentFlower--img img {
+  box-shadow: 4px -1px 16px #efa4b3;
+  border-radius: 200px 0 0 200px;
+  margin-right: 0;
 }
 
 .item_Container img {
   width: 300px;
   object-fit: cover;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 20px;
+}
+
+.item_Container img:hover {
+  transform: scale(1.5);
 }
