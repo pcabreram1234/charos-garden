@@ -33,10 +33,10 @@ const MainPlantContainer = (props) => {
         children={<img className="plantMainImage" src={props.src} />}
         hasCarousel={false}
       />
-      <div className="titleContainer">
-        <h2 className="mainPlant--title">{props.title}</h2>
-      </div>
       <div className="plantMainImage-container">
+        <div className="titleContainer">
+          <h2 className="mainPlant--title">{props.title}</h2>
+        </div>
         <img className="plantMainImage" src={props.src} />
         <div className="actionButtons-container">
           <button

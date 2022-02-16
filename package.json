@@ -6,7 +6,7 @@
   "scripts": {
     "test": "webpack --config webpack.config.js --mode development",
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode development",
+    "build": "webpack --mode production",
     "server": "json-server --watch ./src/utils/plantsBd.json",
     "dev": "concurrently \"npm run server\" \"npm run start\""
   },
@@ -51,7 +51,8 @@
     "webpack": "^5.64.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-middleware": "^5.2.1",
-    "webpack-dev-server": "^4.5.0"
+    "webpack-dev-server": "^4.5.0",
+    "webpack-subresource-integrity": "^5.1.0"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.3",

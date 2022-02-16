@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import FlowersJSon from "../utils/flowersBd.json";
 import "../styles/Flowers.css";
 
@@ -6,6 +6,7 @@ const Flowers = () => {
   const [flowerInfo, setFlowerInfo] = useState([]);
   const [flowerSrc, setFlowerSrc] = useState([]);
   const [title, setTitle] = useState([]);
+  const imageRef = useRef();
 
   function getFlowerInfo(info, src, title) {
     setFlowerInfo(info);
@@ -27,6 +28,16 @@ const Flowers = () => {
     );
   });
 
+  useEffect(() => {
+    console.log(imageRef.current);
+    if (imageRef.current.getAttribute("src") === "") {
+      imageRef.current.style.display = "none";
+      console.log("No hay imagen que mostrar");
+    } else {
+      imageRef.current.style.display = "";
+    }
+  }, [flowerSrc]);
+
   return (
     <div className="Flowers__Container">
       <div className="CurrentFlower_Container">
@@ -36,7 +47,7 @@ const Flowers = () => {
         </div>
 
         <div className="CurrentFlower--img">
-          <img src={flowerSrc} alt="" />
+          <img src={flowerSrc} alt="" ref={imageRef} />
         </div>
       </div>
       <div className="Flowers__Album">{items}</div>

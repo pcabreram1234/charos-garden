@@ -6,8 +6,10 @@
 .container {
   width: 100%;
   margin-bottom: 8vw;
+  margin-top: 80px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .titleContainer {
@@ -32,8 +34,7 @@
 }
 
 .plantMainImage {
-  width: 80vh;
-  height: 25vw;
+  width: 600px;
   object-fit: cover;
 }
 
@@ -97,5 +98,9 @@
   .plantMainImage {
     width: 100%;
     object-fit: cover;
+  }
+
+  .plantMainImage-container {
+    flex-direction: column;
   }
 }

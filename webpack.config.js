@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const {SubresourceIntegrityPlugin} = require("webpack-subresource-integrity");
 
 module.exports = {
   entry: "./src/index.js",
@@ -11,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "assets/[hash][ext][query]",
     publicPath: "/",
+    crossOriginLoading: "anonymous",
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -70,5 +72,6 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: "./src/assets/images", to: "./assets/images" }],
     }),
+    new SubresourceIntegrityPlugin(),
   ],
 };
