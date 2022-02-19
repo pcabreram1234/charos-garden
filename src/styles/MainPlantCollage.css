@@ -55,6 +55,20 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (min-width: 320px) and (max-height: 570px) {
+  #app .PlantsContainer .container .collageContainer .planCollageImage > img {
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+  }
 
+  .ProductDetails__Container
+    .ProductContainer
+    .Product-collage-Container
+    .thumnbnails
+    .planCollageImage {
+    width: 143px;
+    height: auto;
+    object-fit: cover;
+  }
 }

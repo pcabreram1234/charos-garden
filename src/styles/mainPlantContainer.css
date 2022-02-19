@@ -122,3 +122,9 @@
     width: 560px;
   }
 }
+@media (max-width: 570px) {
+  .plantMainImage {
+    width: 300px;
+    object-fit: cover;
+  }
+}

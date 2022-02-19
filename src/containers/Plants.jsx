@@ -8,7 +8,6 @@ import FlowerCatalgo from "../components/FlowerCatalog";
 import { Scroll } from "../utils/scroll";
 import { ScrollToMidle } from "../utils/ScrollToMidle";
 import CarouselPlants from "../components/Carousel";
-import plantsBd from "../utils/plantsBd.json";
 
 const Plants = (props) => {
   const [srcMainImage, setSrc] = useState([]);

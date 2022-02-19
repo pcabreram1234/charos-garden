@@ -97,7 +97,7 @@
   }
 
   .Product_info img {
-    width: 375px;
+    width: 360px;
     height: auto;
     object-fit: cover;
   }
@@ -105,5 +105,34 @@
   .ProductContainer-button {
     left: 75%;
     top: 22%;
+  }
+
+  .ProductDetails__Container .ProductContainer .Product-collage-Container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: calc(1vh);
+  }
+}
+
+@media (min-width: 320px) and (max-height: 570px) {
+  .ProductDetails__Container
+    .ProductContainer
+    .ProductContainer_details
+    .ProductContainer-button {
+    left: 75%;
+    top: 25%;
+  }
+  .Product_info img {
+    width: 300px;
+  }
+}
+
+@media (min-width: 320px) and (max-height: 570px) and (orientation: landscape) {
+  .ProductDetails__Container
+    .ProductContainer
+    .ProductContainer_details
+    .ProductContainer-button {
+    left: 65%;
   }
 }

@@ -42,6 +42,16 @@
   }
 }
 
-@media (max-width:850px) and (orientation:landscape) {
-  
+@media (min-height: 320px) and (max-width: 570px) {
+  .collageContainer .thumnbnails .planCollageImage {
+    width: 127px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (min-height: 320px) and (max-width: 570px) and (orientation: landscape) {
+  .collageContainer {
+    width: auto;
+  }
 }

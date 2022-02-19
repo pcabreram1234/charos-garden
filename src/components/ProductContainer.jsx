@@ -35,13 +35,13 @@ const ProductContainer = (props) => {
           <h1>{title}</h1>
           <img src={srcEl} alt="" />
         </div>
-        <div className="ProductContainer-button">
+       {/*  <div className="ProductContainer-button">
           <img
             src={ZoomIcon}
             alt=""
             onClick={modalFuntions.default.showModal()}
           />
-        </div>
+        </div> */}
       </div>
       <div className="Product-collage-Container">
         <MainPlantCollage src={srcEl} />
