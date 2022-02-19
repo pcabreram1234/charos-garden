@@ -1,6 +1,16 @@
 .mainContainer {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 90%; 
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
 }
+
+@media (max-width: 850px) {
+  .mainContainer {
+    width: 100vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+

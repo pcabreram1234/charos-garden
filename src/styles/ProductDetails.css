@@ -6,11 +6,6 @@
   justify-items: center;
 }
 
-.ProductDetails__Container .ProductContainer .ProductContainer-button {
-  left: 657px;
-  top: 129px;
-}
-
 @media (max-width: 1280px) {
   .ProductDetails__Container {
     grid-template-columns: 50% 50%;
@@ -30,5 +25,19 @@
     width: 200px;
     height: auto;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 850px) {
+  .ProductDetails__Container {
+    display: flex;
+    text-align: center;
+  }
+
+  .ProductContainer_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
   }
 }

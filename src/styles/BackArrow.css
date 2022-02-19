@@ -40,3 +40,11 @@
 .BackArrow-container__button:hover img {
   color: white;
 }
+
+@media (max-width: 850px) {
+  .ProductDetails__Container a {
+    position: absolute;
+    left: 0;
+    top: 59px;
+  }
+}

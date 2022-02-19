@@ -8,13 +8,19 @@
   margin-bottom: 8vw;
   margin-top: 80px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 }
 
 .titleContainer {
-  position: absolute;
-  left: 16%;
+  /*   background: #ec99b773;
+  border: 1px solid #ffb49f;
+  border-radius: 10px;
+  padding: 10px; */
+  /*   position: absolute;
+  left: 40%;
+  top: 2%; */
+  text-align: center;
 }
 
 .mainPlant--title {
@@ -27,7 +33,7 @@
 .plantMainImage-container {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   margin-bottom: 20px;
   margin-top: 40px;
@@ -40,9 +46,8 @@
 
 .actionButtons-container {
   position: absolute;
-  display: flex;
-  margin-left: 72%;
-  margin-top: 8px;
+  top: 15%;
+  left: 75%;
 }
 
 .actionButton {
@@ -96,11 +101,24 @@
     justify-content: center;
   }
   .plantMainImage {
-    width: 100%;
+    width: 390px;
     object-fit: cover;
   }
 
   .plantMainImage-container {
     flex-direction: column;
+  }
+
+  .collageContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+  .plantMainImage {
+    width: 560px;
   }
 }

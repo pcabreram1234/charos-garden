@@ -29,16 +29,19 @@ const ProductContainer = (props) => {
         footer={null}
         src={srcEl}
       />
-      <div className="ProductContainer-button">
-        <img
-          src={ZoomIcon}
-          alt=""
-          onClick={modalFuntions.default.showModal()}
-        />
-      </div>
-      <div className="ProductContainer-image">
-        <h1>{title}</h1>
-        <img src={srcEl} alt="" />
+
+      <div className="ProductContainer_details">
+        <div className="Product_info">
+          <h1>{title}</h1>
+          <img src={srcEl} alt="" />
+        </div>
+        <div className="ProductContainer-button">
+          <img
+            src={ZoomIcon}
+            alt=""
+            onClick={modalFuntions.default.showModal()}
+          />
+        </div>
       </div>
       <div className="Product-collage-Container">
         <MainPlantCollage src={srcEl} />

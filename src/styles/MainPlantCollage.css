@@ -1,5 +1,5 @@
 .thumnbnails {
-  margin: 0px 10px;
+  margin: 10px;
   position: relative;
   display: flex;
 }
@@ -41,7 +41,7 @@
   height: 20px;
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1280px) {
   .thumnbnails {
     margin: 6px 0;
     position: relative;
@@ -53,4 +53,8 @@
     height: auto;
     object-fit: cover;
   }
+}
+
+@media (max-width: 850px) {
+
 }

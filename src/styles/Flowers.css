@@ -1,6 +1,12 @@
+.Flowers__Container {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+  height: 100vh;
+  justify-items: center;
+}
+
 .Flowers__Album {
-  position: absolute;
-  bottom: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
@@ -18,8 +24,8 @@
   text-align: center;
 }
 
-.CurrentFlowe-info{
- padding: 0 10px;
+.CurrentFlowe-info {
+  padding: 0 10px;
 }
 
 .CurrentFlowe-info h1 {
@@ -57,4 +63,70 @@
 
 .item_Container img:hover {
   transform: scale(1.5);
+}
+
+@media (max-width: 850px) {
+  .Flowers__Container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+    align-content: center;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+
+
+  .Flowers__Container .ant-carousel {
+    position: absolute;
+    top: 77px;
+  }
+
+  .CurrentFlower_Container {
+    margin-top: calc(90px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .CurrentFlowe-info {
+    padding: 10px;
+  }
+
+  .CurrentFlowe-info h1 {
+    font-family: Satisfy;
+    font-size: 40px;
+  }
+  .CurrentFlowe-info p {
+    font-size: 15px;
+  }
+
+  .CurrentFlower--img {
+    margin-left: 0%;
+    width: 370px;
+    height: auto;
+    border-radius: 0;
+  }
+  .CurrentFlower--img img {
+    width: 370px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .item_Container img {
+    width: 260px;
+
+    transition: none;
+  }
+  .item_Container img:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+  .CurrentFlower_Container {
+    position: absolute;
+    top: 150px;
+  }
 }

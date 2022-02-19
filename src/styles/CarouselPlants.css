@@ -1,0 +1,9 @@
+.ant-carousel {
+  width: 100vw;
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+  .slick-slide div .thumbnails img {
+    width: 426px;
+  }
+}

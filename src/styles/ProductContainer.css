@@ -6,16 +6,17 @@
   align-items: center;
 }
 
-.ProductContainer-image {
+.ProductContainer_details {
   width: 560px;
   padding: 10px 0px;
+  position: relative;
 }
-.ProductContainer-image img {
+.ProductContainer_details img {
   width: 553px;
   height: 340px;
 }
 
-.ProductContainer-image h1 {
+.ProductContainer_details h1 {
   text-align: center;
   color: white;
 }
@@ -25,28 +26,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  gap: 14px;
+  justify-content: center;
 }
 
 .Product-collage-Container div {
   margin: 0;
   padding: 0;
   margin: 1vh 0;
-}
-
-.ProductContainer-button {
-  opacity: 0.5;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: #f4feff;
-  border-radius: 40px;
-  position: absolute;
-  width: 50px;
-  height: 40px;
-  left: 490px;
-  top: 100px;
-  cursor: pointer;
 }
 
 .ProductContainer-button img {
@@ -59,7 +46,24 @@
   opacity: 1;
 }
 
-@media (max-width: 1280px) {
+.ProductDetails__Container .ProductContainer .ProductContainer-button {
+  opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #f4feff;
+  border-radius: 40px;
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  left: 80%;
+  top: 15%;
+}
+
+@media (min-width: 1280px) {
   .ProductContainer {
     width: 100%;
     display: grid;
@@ -69,10 +73,11 @@
     grid-column: 1 / 1;
   }
 
-  .ProductContainer-image {
+  .ProductContainer_details {
     display: grid;
     place-content: center;
     place-items: center;
+    position: relative;
   }
 
   .Product-collage-Container {
@@ -83,9 +88,22 @@
     margin-left: calc(1vh);
     justify-items: center;
   }
+}
+
+@media (max-width: 850px) {
+  .ProductContainer {
+    margin: 0;
+    padding: 0;
+  }
+
+  .Product_info img {
+    width: 375px;
+    height: auto;
+    object-fit: cover;
+  }
 
   .ProductContainer-button {
-    left: 501px;
-    top: 159px;
+    left: 75%;
+    top: 22%;
   }
 }

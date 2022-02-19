@@ -60,6 +60,7 @@
     "bootstrap": "^5.1.0",
     "concurrently": "^6.3.0",
     "react-popper": "^2.2.5",
+    "react-responsive": "^9.0.0-beta.6",
     "react-router-dom": "^5.2.0",
     "reactstrap": "^8.9.0",
     "request": "^2.79.0"

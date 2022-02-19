@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import MainPlantCollage from "./MainPlantCollage";
 import ZoomIcon from "../assets/images/zoom.png";
 import info from "../assets/images/info.png";
@@ -7,7 +7,8 @@ import Modal2 from "./Modal2";
 
 const MainPlantContainer = (props) => {
   const { handleShowInfo } = props;
-  console.log(props);
+  const plantMainImageRef = useRef();
+  const collageContainerRef = useRef();
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const showModal = () => {
@@ -21,6 +22,14 @@ const MainPlantContainer = (props) => {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
+
+  useEffect(() => {
+    if (plantMainImageRef.current.getAttribute("src") === "") {
+      collageContainerRef.current.style.display = "none";
+    } else {
+      collageContainerRef.current.style.display = "";
+    }
+  }, [plantMainImageRef.current]);
 
   return (
     <div className="container">
@@ -37,7 +46,13 @@ const MainPlantContainer = (props) => {
         <div className="titleContainer">
           <h2 className="mainPlant--title">{props.title}</h2>
         </div>
-        <img className="plantMainImage" src={props.src} />
+        <div className="plantMainImage__container">
+          <img
+            className="plantMainImage"
+            src={props.src}
+            ref={plantMainImageRef}
+          />
+        </div>
         <div className="actionButtons-container">
           <button
             className="actionButton"
@@ -57,7 +72,7 @@ const MainPlantContainer = (props) => {
           </button>
         </div>
       </div>
-      <div className="collageContainer">
+      <div className="collageContainer" ref={collageContainerRef}>
         <MainPlantCollage src={props.src} />
       </div>
     </div>

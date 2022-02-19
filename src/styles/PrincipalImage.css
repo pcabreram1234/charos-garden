@@ -1,18 +1,41 @@
 .PrincipalImage {
-    margin-left: 20px;
-    margin-right: 3%;
-    width: 50%;
-    border-radius: 150px;
-    display: flex;
-    background-color: transparent;
-    background: transparent;
-    float: right;
-
+  margin-left: 20px;
+  margin-right: 3%;
+  width: 50%;
+  border-radius: 150px;
+  display: flex;
+  background-color: transparent;
+  background: transparent;
+  float: right;
 }
 
 .PrincipalImage img {
-    width: 733px;
-    height: 674px;
-    border-radius: 20vh;
-    box-shadow: inset 4px 4px 4px 8px #EC99B7;
+  width: 733px;
+  height: 674px;
+  border-radius: 20vh;
+  box-shadow: inset 4px 4px 4px 8px #ec99b7;
+}
+
+@media (max-width: 820px) {
+  .PrincipalImage {
+    justify-content: center;
+  }
+
+  .PrincipalImage img {
+    width: 352px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 0;
+  }
+}
+
+/* Iphone 5/SE less media queries */
+
+@media (min-height: 320px) and (max-width: 570px) {
+  .PrincipalImage img {
+    width: 277px;
+    height: 283px;
+    object-fit: cover;
+    border-radius: 0;
+  }
 }

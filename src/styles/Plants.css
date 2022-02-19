@@ -11,3 +11,9 @@
   }
 }
 
+@media (max-width: 850px) {
+  .PlantsContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

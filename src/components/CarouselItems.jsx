@@ -17,7 +17,6 @@ const CarouselItems = (props) => {
   return (
     <Carousel autoplay dotPosition="top">
       {objectImage.map((item) => {
-        console.log(item.props);
         return (
           <div key={Math.random()}>
             <img src={item.props.src} alt="" />

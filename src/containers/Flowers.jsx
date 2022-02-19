@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
+import useMatchMedia from "../utils/matchMedia";
 import FlowersJSon from "../utils/flowersBd.json";
+import renderItemsCarousel from "../utils/renderItemsCarousel";
+import CarouselPlants from "../components/Carousel";
 import "../styles/Flowers.css";
 
 const Flowers = () => {
@@ -7,6 +10,7 @@ const Flowers = () => {
   const [flowerSrc, setFlowerSrc] = useState([]);
   const [title, setTitle] = useState([]);
   const imageRef = useRef();
+  const matchMedia = useMatchMedia("(max-width:850px)");
 
   function getFlowerInfo(info, src, title) {
     setFlowerInfo(info);
@@ -14,25 +18,14 @@ const Flowers = () => {
     setTitle(title);
   }
 
-  const items = FlowersJSon.Flowers.map((el) => {
-    return (
-      <div
-        className="item_Container"
-        key={el.id}
-        onClick={() => {
-          getFlowerInfo(el.detail, el.src, el.name);
-        }}
-      >
-        <img src={el.src} alt="" />
-      </div>
-    );
-  });
+  const items = renderItemsCarousel(FlowersJSon.Flowers, getFlowerInfo);
+
+  const normalItems = <div className="Flowers__Album">{items}</div>;
 
   useEffect(() => {
     console.log(imageRef.current);
     if (imageRef.current.getAttribute("src") === "") {
       imageRef.current.style.display = "none";
-      console.log("No hay imagen que mostrar");
     } else {
       imageRef.current.style.display = "";
     }
@@ -50,7 +43,11 @@ const Flowers = () => {
           <img src={flowerSrc} alt="" ref={imageRef} />
         </div>
       </div>
-      <div className="Flowers__Album">{items}</div>
+      {matchMedia ? (
+        <CarouselPlants cb={getFlowerInfo} isFlowers={true} />
+      ) : (
+        normalItems
+      )}
     </div>
   );
 };
