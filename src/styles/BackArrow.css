@@ -1,7 +1,7 @@
 .BackArrow-container {
   position: absolute;
   left: 10px;
-  top: 2px;
+  top: 20px;
   width: 100%;
   grid-column: 1 / 1;
 }

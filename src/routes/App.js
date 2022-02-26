@@ -7,6 +7,7 @@ import ProductDetails from "../containers/ProductDetails";
 import AboutUs from "../containers/AboutUs";
 import Flowers from "../containers/Flowers";
 import ContactUs from "../containers/ContactUs";
+import GiftsContainer from "../containers/GiftsContainer";
 import "../styles/App.css";
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/AboutUs" component={AboutUs} />
         <Route path="/Flowers" component={Flowers} />
         <Route path="/Contact" component={ContactUs} />
+        <Route path="/Gifts" component={GiftsContainer} />
       </Switch>
     </Router>
   );

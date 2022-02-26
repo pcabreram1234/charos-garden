@@ -1,4 +1,5 @@
 import React from "react";
+import { Scroll } from "../utils/scroll";
 
 function renderItemsCarousel(items, cb) {
   const result = items.map((el) => {
@@ -8,6 +9,7 @@ function renderItemsCarousel(items, cb) {
         key={el.id}
         onClick={() => {
           cb(el.detail, el.src, el.name);
+          Scroll();
         }}
       >
         <img src={el.src} alt="" />

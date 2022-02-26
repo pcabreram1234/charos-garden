@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Scroll } from "../utils/scroll";
 function renderPlants(items, cb) {
   const result = items.map((el) => {
     return (
@@ -7,6 +7,7 @@ function renderPlants(items, cb) {
         key={el.id}
         className="thumbnails"
         onClick={() => {
+          Scroll();
           return cb(el.src, el.title, el.id);
         }}
       >
