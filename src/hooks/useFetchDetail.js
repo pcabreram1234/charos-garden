@@ -1,5 +1,5 @@
-async function useFetchDetail(id) {
-  const fetching = await fetch(`http://localhost:3000/Plants?id=${id}`);
+async function useFetchDetail(id,API) {
+  const fetching = await fetch(`${API}?id=${id}`);
   const response = await fetching.json();
   return response;
 }

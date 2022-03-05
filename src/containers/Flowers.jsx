@@ -23,7 +23,6 @@ const Flowers = () => {
   const normalItems = <div className="Flowers__Album">{items}</div>;
 
   useEffect(() => {
-    console.log(imageRef.current);
     if (imageRef.current.getAttribute("src") === "") {
       imageRef.current.style.display = "none";
     } else {

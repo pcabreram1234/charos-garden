@@ -27,7 +27,7 @@ const Gifts = () => {
       <div className="Gifts_info">
         <div className="Gifts_info--letters">
           <h1>Gifts Ideas</h1>
-          <span>Tenemos las mejores opciones para tus regalos</span>
+          <span>We have the best options for your gifts</span>
         </div>
         <div className="Gifts_info--image">
           <img src={BackGroundImage} alt="" />

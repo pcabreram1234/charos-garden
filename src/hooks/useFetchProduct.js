@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-const useFetchProduct = (id) => {
+const useFetchProduct = (id,API) => {
   const [image, setImages] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:3000/Plants?id=${id}`)
+    fetch(`${API}?id=${id}`)
       .then((response) => response.json())
       .then((data) => {
        setImages(data);

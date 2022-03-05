@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-const UseFlowerCatalog = () => {
+const UseFlowerCatalog = (API) => {
   const [images, setImages] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/Plants")
+    fetch(API)
       .then((response) => response.json())
       .then((data) => {
         setImages(data);
