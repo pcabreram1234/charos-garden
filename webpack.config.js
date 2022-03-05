@@ -17,6 +17,11 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
   module: {
     rules: [
       {
@@ -71,6 +76,13 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: "./src/assets/images", to: "./assets/images" }],
+      patterns: [
+        { from: "./src/assets/fonts", to: "./assets/fonts" },
+        {
+          from: path.resolve(__dirname, "public", "_redirects"),
+          force: true,
+        },
+      ],
     }),
     new SubresourceIntegrityPlugin(),
   ],
