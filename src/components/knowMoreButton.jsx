@@ -1,12 +1,9 @@
 import React from "react";
-import "../styles/KnowMoreButton.css"
+import { Link } from "react-router-dom";
+import "../styles/KnowMoreButton.css";
 
 const KnowMoreButton = () => {
-  return (
-    <button type="button" role="button" className="KnowMoreButton">
-      Saber Mas
-    </button>
-  );
+  return <Link className="KnowMoreButton" to={"/Flowers"}>Saber Mas</Link>;
 };
 
 export default KnowMoreButton;

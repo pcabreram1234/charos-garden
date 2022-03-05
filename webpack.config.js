@@ -75,8 +75,8 @@ module.exports = {
       filename: "assets/styles/[name].[contenthash].css",
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: "./src/assets/images", to: "./assets/images" }],
       patterns: [
+        { from: "./src/assets/images", to: "./assets/images" },
         { from: "./src/assets/fonts", to: "./assets/fonts" },
         {
           from: path.resolve(__dirname, "public", "_redirects"),

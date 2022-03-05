@@ -8,6 +8,7 @@
     width: 40vh;
     outline: none;
     color: black;
+    text-decoration: none;
 }
 
 .KnowMoreButton:hover {
