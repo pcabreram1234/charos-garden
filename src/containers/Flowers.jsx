@@ -9,6 +9,7 @@ import "../styles/Flowers.css";
 const Flowers = () => {
   const API = process.env.API_FLOWERS;
   let FlowersJSon = UseFlowerCatalog(API);
+  let normalItems;
   let items;
   const [flowerInfo, setFlowerInfo] = useState([]);
   const [flowerSrc, setFlowerSrc] = useState([]);
