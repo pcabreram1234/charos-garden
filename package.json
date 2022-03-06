@@ -6,7 +6,7 @@
   "scripts": {
     "test": "webpack --config webpack.config.js --mode development",
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production && node ./scripts/create.env.js",
+    "build": "webpack --mode production && node scripts/create.env.js",
     "server": "json-server --watch ./src/utils/plantsBd.json",
     "dev": "concurrently \"npm run server\" \"npm run start\""
   },
