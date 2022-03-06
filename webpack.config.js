@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const { SubresourceIntegrityPlugin } = require("webpack-subresource-integrity");
+const DotenvWebpackPlugin = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.js",
@@ -85,5 +86,6 @@ module.exports = {
       ],
     }),
     new SubresourceIntegrityPlugin(),
+    new DotenvWebpackPlugin(),
   ],
 };

@@ -8,7 +8,7 @@ function renderItemsCarousel(items, cb) {
         className="item_Container"
         key={el.id}
         onClick={() => {
-          cb(el.detail, el.src, el.name);
+          cb(el.detail, el.src, el.name, el.detail);
           Scroll();
         }}
       >

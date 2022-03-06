@@ -1,11 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import useMatchMedia from "../utils/matchMedia";
-import FlowersJSon from "../utils/flowersBd.json";
+/* import FlowersJSon from "../utils/flowersBd.json"; */
 import renderItemsCarousel from "../utils/renderItemsCarousel";
 import CarouselPlants from "../components/Carousel";
+import UseFlowerCatalog from "../hooks/useFlowerCatalog";
 import "../styles/Flowers.css";
 
 const Flowers = () => {
+  const API = process.env.API_FLOWERS;
+  let FlowersJSon = UseFlowerCatalog(API);
+  let items;
   const [flowerInfo, setFlowerInfo] = useState([]);
   const [flowerSrc, setFlowerSrc] = useState([]);
   const [title, setTitle] = useState([]);
@@ -18,11 +22,21 @@ const Flowers = () => {
     setTitle(title);
   }
 
-  const items = renderItemsCarousel(FlowersJSon.Flowers, getFlowerInfo);
+  const renderItems = () => {
+    /* Con esta funcion renderizamos el collage 
+    dependiendo del mediaqueries */
+    if (FlowersJSon.length > 0 && !matchMedia) {
+      items = renderItemsCarousel(FlowersJSon, getFlowerInfo);
+      return (normalItems = <div className="Flowers__Album">{items}</div>);
+    }
 
-  const normalItems = <div className="Flowers__Album">{items}</div>;
+    if (FlowersJSon.length > 0 && matchMedia) {
+      return <CarouselPlants cb={getFlowerInfo} isFlowers={true} />;
+    }
+  };
 
   useEffect(() => {
+    renderItems();
     if (imageRef.current.getAttribute("src") === "") {
       imageRef.current.style.display = "none";
     } else {
@@ -42,11 +56,7 @@ const Flowers = () => {
           <img src={flowerSrc} alt="" ref={imageRef} />
         </div>
       </div>
-      {matchMedia ? (
-        <CarouselPlants cb={getFlowerInfo} isFlowers={true} />
-      ) : (
-        normalItems
-      )}
+      {renderItems()}
     </div>
   );
 };

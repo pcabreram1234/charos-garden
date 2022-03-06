@@ -7,7 +7,8 @@ import "../styles/flowerCatalog.css";
 import Thumbnails from "./Thumbnail";
 
 const FlowerCatalgo = (props) => {
-  const renderFlowers = UseFlowerCatalog();
+  const API = process.env.API_PLANTS;
+  const renderFlowers = UseFlowerCatalog(API);
   const match = useMatchMedia("(max-width:850px)");
   const imagesList = renderFlowers.map((el) => {
     return (
@@ -16,6 +17,7 @@ const FlowerCatalgo = (props) => {
         src={el.src}
         name={el.name}
         id={el.id}
+        detail={el.detail}
         getSrcImage={props.handleClick}
       />
     );

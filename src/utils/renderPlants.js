@@ -8,7 +8,7 @@ function renderPlants(items, cb) {
         className="thumbnails"
         onClick={() => {
           Scroll();
-          return cb(el.src, el.title, el.id);
+          return cb(el.src, el.title, el.id, el.detail);
         }}
       >
         <img src={el.src} alt="" name={el.name} />

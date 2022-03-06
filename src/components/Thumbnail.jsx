@@ -7,7 +7,7 @@ const Thumbnails = (props) => {
       key={props.id}
       className="thumbnails"
       onClick={() => {
-        props.getSrcImage(props.src, props.name, props.id);
+        props.getSrcImage(props.src, props.name, props.id, props.detail);
       }}
     >
       <img src={props.src} alt="" name={props.name} />

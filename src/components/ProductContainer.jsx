@@ -1,21 +1,28 @@
 import React from "react";
-import useFetchProduct from "../hooks/useFetchProduct";
 import MainPlantCollage from "../components/MainPlantCollage";
 import Modal2 from "./Modal2";
-import ZoomIcon from "../assets/images/zoom.png";
 import "../styles/ProductContainer.css";
 import * as modalFuntions from "../utils/modalFuntions";
+import UseFlowerCatalog from "../hooks/useFlowerCatalog";
 
 const ProductContainer = (props) => {
-  const { id } = props;
-  const fetch = useFetchProduct(id);
+  const API = process.env.API_PLANTS;
+  const fetch = UseFlowerCatalog(API);
   let srcEl = "";
   let title = "";
 
-  for (const el of fetch) {
-    srcEl = el.src;
-    title = el.name;
-  }
+  const renderCurrentPlant = () => {
+    if (fetch.length > 0) {
+      fetch.map((el) => {
+        if (el.id.toString() === props.id) {
+          srcEl = el.src;
+          title = el.name;
+        }
+      });
+    }
+  };
+
+  renderCurrentPlant();
   return (
     <div className="ProductContainer">
       <Modal2
@@ -35,13 +42,6 @@ const ProductContainer = (props) => {
           <h1>{title}</h1>
           <img src={srcEl} alt="" />
         </div>
-       {/*  <div className="ProductContainer-button">
-          <img
-            src={ZoomIcon}
-            alt=""
-            onClick={modalFuntions.default.showModal()}
-          />
-        </div> */}
       </div>
       <div className="Product-collage-Container">
         <MainPlantCollage src={srcEl} />

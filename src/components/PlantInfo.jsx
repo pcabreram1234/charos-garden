@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import plantInforBackground from "../assets/images/backGroundTittle.png";
 import plantInfoBackgroundResponsive from "../assets/images/backGroundTittleResponsive.png";
-import useFetchDetail from "../hooks/useFetchDetail";
+import UseFlowerCatalog from "../hooks/useFlowerCatalog";
 import useMatchMedia from "../utils/matchMedia";
 import "../styles/PlantInfo.css";
 const PlantInfo = (props) => {
-  const [detail, setDetail] = useState("");
   const matchMediaLarge = useMatchMedia("(min-width: 1280px)");
-  const matchMediaNormal = useMatchMedia("(max-width: 850px)");
   const matchMediaSmall = useMatchMedia(
     "(min-width:320px) and (max-height:570px)"
   );
@@ -46,17 +44,9 @@ const PlantInfo = (props) => {
     }
   };
 
-  useEffect(() => {
-    useFetchDetail(props.id).then((data) => {
-      setDetail(data[0].detail);
-    });
-
-    console.log(matchMediaLarge, matchMediaNormal);
-  }, [detail]);
-
   return (
     <div className="PlantInfo__Container" style={handleMatchMedia()}>
-      {<span>{detail}</span>}
+      {<span>{props.detail}</span>}
     </div>
   );
 };
