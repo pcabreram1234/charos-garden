@@ -28,7 +28,7 @@ const Flowers = () => {
     dependiendo del mediaqueries */
     if (FlowersJSon.length > 0 && !matchMedia) {
       items = renderItemsCarousel(FlowersJSon, getFlowerInfo);
-      return (normalItems = <div className="Flowers__Album">{items}</div>);
+      normalItems = <div className="Flowers__Album">{items}</div>;
     }
 
     if (FlowersJSon.length > 0 && matchMedia) {
