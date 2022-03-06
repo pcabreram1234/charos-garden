@@ -9,7 +9,6 @@ import "../styles/Flowers.css";
 const Flowers = () => {
   const API = process.env.API_FLOWERS;
   let FlowersJSon = UseFlowerCatalog(API);
-  let normalItems;
   let items;
   const [flowerInfo, setFlowerInfo] = useState([]);
   const [flowerSrc, setFlowerSrc] = useState([]);
@@ -28,7 +27,7 @@ const Flowers = () => {
     dependiendo del mediaqueries */
     if (FlowersJSon.length > 0 && !matchMedia) {
       items = renderItemsCarousel(FlowersJSon, getFlowerInfo);
-      normalItems = <div className="Flowers__Album">{items}</div>;
+      return <div className="Flowers__Album">{items}</div>;
     }
 
     if (FlowersJSon.length > 0 && matchMedia) {
