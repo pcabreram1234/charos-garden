@@ -5,10 +5,10 @@ import KnowMoreButton from "./knowMoreButton";
 const Title = () => {
   return (
     <div className="title">
-      <h1>Charos Garden</h1>
+      <h1>Charo`s Garden</h1>
       <p>
-        Con amor para ti, donde encontrarás las mejores flores, plantas,
-        tratamientos, y demás para tu jardín
+        With love for you, where you will find the best flowers, plants,
+        treatments and more for your garden
       </p>
       <KnowMoreButton />
     </div>
