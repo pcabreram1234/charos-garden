@@ -2,29 +2,29 @@
   "Gifts": [
     {
       "name": "1",
-      "src": "../assets/images/Gifts/1.png"
+      "src": "/assets/images/Gifts/1.png"
     },
     {
       "name": "2",
-      "src": "../assets/images/Gifts/2.png"
+      "src": "/assets/images/Gifts/2.png"
     },
     {
       "name": "3",
-      "src": "../assets/images/Gifts/3.png"
+      "src": "/assets/images/Gifts/3.png"
     },
     {
       "name": "4",
-      "src": "../assets/images/Gifts/4.png"
+      "src": "/assets/images/Gifts/4.png"
     },
     {
       "name": "5",
-      "src": "../assets/images/Gifts/5.png"
+      "src": "/assets/images/Gifts/5.png"
     }
   ],
   "Principal": [
     {
       "name": "Principal",
-      "src": "../assets/images/Gifts/backGround.png"
+      "src": "/assets/images/Gifts/backGround.png"
     }
   ]
 }

@@ -16,7 +16,7 @@
       "id": 3,
       "name": "Antiguas",
       "detail": "En el cultivo de las rosas de jardín una rosa antigua se define como cualquier rosa que pertenezca a una variedad existente con anterioridad a la introducción de la primera rosa moderna de jardín, la rosa 'La France', en 1867.1​​",
-      "src": "/assets/images/antiguas.png"
+      "src": "./assets/images/antiguas.png"
     }
   ]
 }

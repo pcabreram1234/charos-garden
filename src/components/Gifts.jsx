@@ -13,8 +13,8 @@ const Gifts = () => {
   let renderGiftsCollage = [];
 
   const renderGifts = () => {
-    if (GiftsInfo.length > 0) {
-      renderGiftsCollage = GiftsInfo.map((el) => {
+    if (GiftsInfo.Gifts) {
+      renderGiftsCollage = GiftsInfo.Gifts.map((el) => {
         return (
           <div className="collageItem" key={Math.random() / 0.5}>
             <img src={el.src} alt={el.name} />

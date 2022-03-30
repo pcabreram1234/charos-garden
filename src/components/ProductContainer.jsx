@@ -12,8 +12,8 @@ const ProductContainer = (props) => {
   let title = "";
 
   const renderCurrentPlant = () => {
-    if (fetch.length > 0) {
-      fetch.map((el) => {
+    if (fetch.Plants) {
+      fetch.Plants.map((el) => {
         if (el.id.toString() === props.id) {
           srcEl = el.src;
           title = el.name;

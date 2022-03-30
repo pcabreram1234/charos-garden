@@ -2,7 +2,7 @@ import React from "react";
 import { Scroll } from "../utils/scroll";
 
 function renderItemsCarousel(items, cb) {
-  const result = items.map((el) => {
+  const result =  items.map((el) => {
     return (
       <div
         className="item_Container"

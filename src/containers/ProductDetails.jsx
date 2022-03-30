@@ -11,8 +11,8 @@ const ProductDetails = (props) => {
   const currentPlant = UseFlowerCatalog(API);
   let detail;
   const getDetails = () => {
-    if (currentPlant.length > 0) {
-      currentPlant.map((el) => {
+    if (currentPlant.Plants) {
+      currentPlant.Plants.map((el) => {
         if (el.id.toString() === id) {
           detail = el.detail;
         }

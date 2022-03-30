@@ -83,6 +83,7 @@ module.exports = {
           from: path.resolve(__dirname, "public", "_redirects"),
           force: true,
         },
+        { from: "./src/utils/*.json", to: "./assets/utility/[name][ext]" },
       ],
     }),
     new SubresourceIntegrityPlugin(),

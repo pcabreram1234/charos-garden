@@ -14,10 +14,10 @@ const CarouselPlants = (props) => {
   const plantsItems = UseFlowerCatalog(API_PLANTS);
 
   const renderItems = () => {
-    if (flowersItems.length > 0 || plantsItems.length > 0) {
+    if (flowersItems.Flowers || plantsItems.Plants) {
       props.isFlowers
-        ? (items = renderItemsCarousel(flowersItems, props.cb))
-        : (items = renderPlants(plantsItems, props.cb));
+        ? (items = renderItemsCarousel(flowersItems.Flowers, props.cb))
+        : (items = renderPlants(plantsItems.Plants, props.cb));
     }
   };
 

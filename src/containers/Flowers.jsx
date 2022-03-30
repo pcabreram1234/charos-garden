@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import useMatchMedia from "../utils/matchMedia";
-/* import FlowersJSon from "../utils/flowersBd.json"; */
 import renderItemsCarousel from "../utils/renderItemsCarousel";
 import CarouselPlants from "../components/Carousel";
 import UseFlowerCatalog from "../hooks/useFlowerCatalog";
@@ -25,12 +24,13 @@ const Flowers = () => {
   const renderItems = () => {
     /* Con esta funcion renderizamos el collage 
     dependiendo del mediaqueries */
-    if (FlowersJSon.length > 0 && !matchMedia) {
-      items = renderItemsCarousel(FlowersJSon, getFlowerInfo);
+    if (FlowersJSon.Flowers && !matchMedia) {
+      console.log(FlowersJSon);
+      items = renderItemsCarousel(FlowersJSon.Flowers, getFlowerInfo);
       return <div className="Flowers__Album">{items}</div>;
     }
 
-    if (FlowersJSon.length > 0 && matchMedia) {
+    if (FlowersJSon.Flowers > 0 && matchMedia) {
       return <CarouselPlants cb={getFlowerInfo} isFlowers={true} />;
     }
   };

@@ -3,49 +3,49 @@
     {
       "id": 0,
       "name": "Lengua de Suegra",
-      "src": "../assets/images/plant1.png",
+      "src": "/assets/images/plant1.png",
       "detail": "Sansevieria trifasciata es una planta semisuculenta que crece en rosetas basales y verticales, las hojas son erectas, lanceoladas, agudas y rígidas, de 40 a 140 cm de largo y unos 4 a 10 cm de ancho. De diferentes colores y patrones según la variedad, siendo la más común de color verde oscuro con líneas transversales de verde más pálido, los márgenes enteros, verdes o a veces amarillos."
     },
     {
       "id": 1,
       "name": "Agapanto Africano",
-      "src": "../assets/images/plant2.png",
+      "src": "/assets/images/plant2.png",
       "detail": "Se trata de una planta herbácea, perennifolia, rizomatosa. Posee un tallo corto que porta varias hojas alargadas, arciformes, de 10 a 35 cm (centímetros) de longitud y de 1 a 2 de ancho, además de un estipe floral de 25 a 60 cm de longitud, que se ve coronado por una umbela de 20 a 30 flores de color violeta brillante o blanco, cada flor, hermafrodita y actinomorfa, de 2,5 a 5 cm de diámetro."
     },
     {
       "id": 2,
       "name": "Trepadora Copa de Oro",
-      "src": "../assets/images/plant3.png",
+      "src": "/assets/images/plant3.png",
       "detail": "Son bejucos o arbustos trepadores. Hojas verticiladas, oblanceoladas a obovado-elípticas, 3–15 cm de largo y 1.5–5 cm de ancho, ápice acuminado, base cuneada. Inflorescencia racemosa, con flores amarillas; sépalos ovados, foliáceos, 5–10 mm de largo; corola ampliamente campanulada encima de un tubo basal angosto, hasta 12 cm de largo; anteras aglutinadas al estigma; ovario sincárpico. Fruto cápsula ligeramente aplanada, elipsoide, hasta ca 7 cm de largo, espinosa; semillas planas, secas, con un ala concéntrica gruesa."
     },
     {
       "id": 3,
       "name": "BuganVillas",
-      "src": "../assets/images/plant4.png",
+      "src": "/assets/images/plant4.png",
       "detail": "Son arbustos o árboles pequeños, algunos trepadores perennes en las zonas lluviosas todo el año, o bien caducifolios en las de estación seca; de entre 1 hasta 12 m de altura."
     },
     {
       "id": 4,
       "name": "Cyclamen",
-      "src": "../assets/images/plant5.png",
+      "src": "/assets/images/plant5.png",
       "detail": "lantas herbáceas, perennes, con tubérculos más o menos lisos, glabros o pubescentes, enraizantes en toda la superficie o solo en la base. Hojas con largo peciolo, subenteras o inciso-lobadas, glabras o glabrescentes, con haz verde moteado y envés de color verde o purpúreo."
     },
     {
       "id": 5,
       "name": "Oreja de Oso",
-      "src": "../assets/images/plant6.png",
+      "src": "/assets/images/plant6.png",
       "detail": "Es una especie perenne, con una roseta laxa de hojas oblanceoladas a obovadas, arrugadas, irregularmente dentadas. Flores perfumadas, amarillo pálido con el centro más oscuro, que brotan individualmente en rabillos afilos de largos pelos, que salen de la roseta foliar."
     },
     {
       "id": 6,
       "name": "Corazon de Jesus",
-      "src": "../assets/images/plant7.png",
+      "src": "/assets/images/plant7.png",
       "detail": "El género Caladium incluye doce especies, nativas de Brasil y Guayana y regiones vecinas de Sudamérica y de Centroamérica. Crecen en áreas abiertas de la selva en la estación seca. La planta silvestre alcanza 40 a 90 cm de altura con hojas de 15 y 45 cm de largo y ancho, respectivamente."
     },
     {
       "id": 7,
       "name": "Ornamental",
-      "src": "../assets/images/plant8.png",
+      "src": "/assets/images/plant8.png",
       "detail": "Una planta ornamental es aquella que se cultiva y se comercializa con propósitos decorativos por sus características estéticas, como las flores, hojas, perfume, la peculiaridad de su follaje, frutos o tallos en jardines y diseños paisajísticos, como planta de interior o para flor cortada.1​"
     }
   ]
